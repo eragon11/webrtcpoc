@@ -4,8 +4,9 @@
   "description": "Simple WebRTC Messenger",
   "scripts": {
     "start": "node index.js",
-    "predeploy": "npm build",
-    "deploy": "gh-pages -d build"
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build",
+    "build": "babel . -d build --presets es2015 --ignore node_modules,logs"
   },
   "keywords": [
     "WebRTC"
