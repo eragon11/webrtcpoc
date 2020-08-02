@@ -1,22 +1,18 @@
-'use strict';
+const express = require('express');
 
-var express = require('express');
-
-var app = express();
-var port = 3000;
+const app = express();
+const port = 3000;
 
 // Set public folder as root
 app.use(express.static('public'));
 
 // Provide access to node_modules folder
-app.use('/scripts', express.static(__dirname + '/node_modules/'));
+app.use('/scripts', express.static(`${__dirname}/node_modules/`));
 
 // Redirect all traffic to index.html
-app.use(function (req, res) {
-  return res.sendFile(__dirname + '/public/index.html');
-});
+app.use((req, res) => res.sendFile(`${__dirname}/public/index.html`));
 
-app.listen(port, function () {
+app.listen(port, () => {
   // eslint-disable-next-line no-console
   console.info('listening on %d', port);
 });
