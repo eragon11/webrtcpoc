@@ -1,35 +1,25 @@
 {
-  "name": "simplewebrtc-messenger",
+  "name": "webrtc-video-conference-tutorial",
   "version": "1.0.0",
-  "description": "Simple WebRTC Messenger",
+  "description": "This tutorial is divided in three versions:",
+  "main": "server.js",
   "scripts": {
-    "start": "node index.js",
-    "predeploy": "npm build",
-    "deploy": "gh-pages -d build"
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node server.js"
   },
-  "keywords": [
-    "WebRTC"
-  ],
-  "author": "Michael Wanyoike",
-  "license": "MIT",
   "repository": {
     "type": "git",
-    "url": "git@github.com:eragon11/webrtcpoc.git"
+    "url": "git+https://github.com/agilityfeat/webrtc-video-conference-tutorial.git"
   },
-  "homepage": "http://eragon11.github.io/webrtcpoc",
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/agilityfeat/webrtc-video-conference-tutorial/issues"
+  },
+  "homepage": "https://github.com/agilityfeat/webrtc-video-conference-tutorial#readme",
   "dependencies": {
-    "express": "^4.16.3",
-    "gh-pages": "^3.1.0",
-    "handlebars": "^4.0.11",
-    "jquery": "^3.3.1",
-    "semantic-ui-css": "^2.3.1",
-    "simplewebrtc": "^3.0.1"
-  },
-  "devDependencies": {
-    "babel-cli": "^6.26.0",
-    "babel-core": "^6.26.0",
-    "babel-preset-env": "^1.6.1",
-    "babel-preset-es2015": "^6.24.1",
-    "nodemon": "^1.12.1"
+    "express": "^4.16.4",
+    "socket.io": "^2.2.0"
   }
 }
